@@ -22,10 +22,10 @@ h2{
 
 img {float: center;}
 
-header {
-        background-image: url(blackcover.jpg); background-size: cover;
-}
 
+#blackcoverdiv {
+background-image: url(../HTML/Images/blackcover.jpg); background-size: cover;
+}
 
 
 
@@ -67,37 +67,42 @@ nav {
     color: white;
     background-color: #2f3061;
     text-decoration: none;
-    padding: 4px;
-    border-radius: 4px;
+    padding: 2px;
+    border-radius: 2px;
 }
 .Education a:hover {
     background: rgba(47, 48, 97, 80%);
 }
 
-.Education {
-    background-image: url(../HTML\ Week\ 1/pencils.jpg); background-size: cover;
+#EducationDiv {
+    background-image: url(../Images/pencils.jpg); background-size: cover;
 }
 
 .Education p{ width: 60%;}
 
 /* Professional Experience
 -------------------*/
+#ProfExperience {
+    clear: left;
+}
 .Professional-Experience {
     background-color: #ccf5ff;
 }
+
+#ExperienceDiv {
+    background-image: url(../Images/flower\ desk.jpg);
+    background-size: cover;
+}
+
 .Professional-Experience a {
     color: white;
     background-color: #2f3061;
     text-decoration: none;
-    padding: 4px;
-    border-radius: 4px;
+    padding: 1px;
+    border-radius: 1px;
 }
 .Professional-Experience a:hover {
     background: rgba(47, 48, 97, 80%);
-}
-
-.Professional-Experience {
-    background-image: url(../HTML\ Week\ 1/work3.jpg); background-size: cover;
 }
 
 
@@ -106,7 +111,7 @@ nav {
 /* Technical Skills
 --------------------*/
 .Technical-Skills {
- background-image: url(../HTML\ Week\ 1/green.jpeg); background-size: cover;
+ background-image: url(../Images/green.jpeg); background-size: cover;
 
 }
 .webtech {display: grid;
@@ -127,7 +132,7 @@ background-color: #ffffb3;
 
 /* Portfolio and Projects
 ---------------------------*/
-
+#portfo {margin-bottom: 4px;}
 
 /* References
 -----------------------*/
