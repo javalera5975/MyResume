@@ -1,0 +1,144 @@
+/*
+color pallete
+https://www.w3schools.com/colors/colors_picker.asp
+*/
+
+
+.content-wrap{
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+   background-color: whitesmoke;
+}
+
+h2{
+    margin: 0; font-family: cursive;
+}
+
+img {float: center;}
+
+header {
+        background-image: url(blackcover.jpg); background-size: cover;
+}
+
+
+
+
+
+/* Profile
+----------------------*/
+
+
+a:link {
+    color: #f7fff7;
+}
+a:visited {
+    color: #f7fff7;
+}
+
+header {
+    background-color: #2f3061;
+    color: white;
+    text-align: center;
+}
+
+
+nav {
+    background-color: #2f3061;
+    color: #f7fff7;
+    text-align: center ;
+}
+
+
+ a:hover {text-decoration: none;}
+
+/* Education
+--------------------*/
+.Education {background-color: turquoise;}
+
+
+
+.Education a{
+    color: white;
+    background-color: #2f3061;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 4px;
+}
+.Education a:hover {
+    background: rgba(47, 48, 97, 80%);
+}
+
+.Education {
+    background-image: url(../HTML\ Week\ 1/pencils.jpg); background-size: cover;
+}
+
+.Education p{ width: 60%;}
+
+/* Professional Experience
+-------------------*/
+.Professional-Experience {
+    background-color: #ccf5ff;
+}
+.Professional-Experience a {
+    color: white;
+    background-color: #2f3061;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 4px;
+}
+.Professional-Experience a:hover {
+    background: rgba(47, 48, 97, 80%);
+}
+
+.Professional-Experience {
+    background-image: url(../HTML\ Week\ 1/work3.jpg); background-size: cover;
+}
+
+
+
+
+/* Technical Skills
+--------------------*/
+.Technical-Skills {
+ background-image: url(../HTML\ Week\ 1/green.jpeg); background-size: cover;
+
+}
+.webtech {display: grid;
+grid-template-columns: 1fr 2fr;}
+
+/*Core Competencies
+--------------------*/
+.Core-Competencies {
+background-color: #ffffb3;
+}
+
+
+/* Certificates and Awards
+---------------------------*/
+.Certificates-and-Awards {
+    background-color: #ffcce6;
+}
+
+/* Portfolio and Projects
+---------------------------*/
+
+
+/* References
+-----------------------*/
+.References {
+    background-color:#e0ebeb;
+}
+
+footer {
+    background-color: #343434;
+    color: #f7fff7;
+    text-align: center;
+}
+
+.form {text-align: center;}
