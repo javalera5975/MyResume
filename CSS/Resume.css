@@ -24,7 +24,7 @@ img {float: center;}
 
 
 #blackcoverdiv {
-background-image: url(../HTML/Images/blackcover.jpg); background-size: cover;
+background-image: url(../Images/blackcover.jpg); background-size: cover;
 }
 
 
@@ -44,8 +44,10 @@ a:visited {
 header {
     background-color: #2f3061;
     color: white;
-    text-align: center;
+    text-align: center; 
 }
+
+
 
 
 nav {
