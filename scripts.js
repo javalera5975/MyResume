@@ -4,6 +4,7 @@ let table = document.getElementById('references-table'); table.style.color = "Re
 
 $(document).ready(() => {
     $('#getUserName').modal('show');
+    custoizeGreeting();
 });
 
 
@@ -29,9 +30,9 @@ function getContactData()
     console.log(phonenumber);
 }
 /*---------------------time of day code--------------*/
-function custoizeGreeting() {
-    let hour = getTimeOfDay
-    let message = 'Early Bird Special';
+function custoizeGreeting() 
+{
+    let hour = getTimeOfDay();
 
     if (hour >=5 && hour < 12) {
         message = 'Good Morning';
@@ -40,6 +41,8 @@ function custoizeGreeting() {
     } else if (hour >= 18) {
         message = 'Good Evening and Good Night';
     }
+    displayGreetingMessage(message);
+
 }    
 
 
@@ -50,3 +53,6 @@ function getTimeOfDay()
  return hour;
 }
 
+function displayGreetingMessage (message) {
+    document.getElementById('message').innerHTML = message;
+}
