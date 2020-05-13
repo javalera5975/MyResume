@@ -1,10 +1,7 @@
 let table = document.getElementById('references-table'); 
 table.style.color = "Red"
 
-$(document).ready(() => {
-    $('#getUserName').modal('show');
-    customizeGreeting();
-});
+
 
 function greetUser() 
 {
@@ -61,22 +58,28 @@ function displayGreetingMessage (message)
 let exampleArray2 = [1,2,3];
 let exampleArray3 = ["one etc.", "two seven", "three"]; */
 
-function displsyRreferences() {
+function displayReferences() {
  let references = [
-    {company: "Company", contact: "Contact", contactInfo: "Contact Info"},
+    {company: 'Company', contact: 'Contact', contactInfo: 'Contact Info'},
     {company: "University of Utah Redwood Pharmacy", contact: "Machaela Jaquez", contactInfo: "801-213-9950"},
     {company: "University of Utah Home Infusion", contact: "Jamie Doi", contactInfo: "801-587-8600"},
  ];
 
-let tableBody = document.querySelector('#references-table>tbody');
+ let tableBody = document.querySelector('#references-table>tbody');
 
 for (let reference of references) {
     let html = '';
     html += '<tr>';
     html += '<td>' + reference.company + '</td>';
     html += '<td>' + reference.contact + '</td>';
-    html += '<td>' + reference.contactInfo+ '</td>';
+    html += '<td>' + reference.contactInfo + '</td>';
     html += '</tr>';
 
-    tableBody.innerHTML += html;}
+    tableBody.innerHTML += html;
+ }
 }
+$(document).ready(() => {
+    $('#getUserName').modal('show');
+    customizeGreeting();
+    displayReferences();
+});
