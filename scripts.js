@@ -2,7 +2,6 @@ let table = document.getElementById('references-table');
 table.style.color = "Red"
 
 
-
 function greetUser() 
 {
     let name = document.getElementById('greetingName').value;
@@ -23,6 +22,9 @@ function getContactData()
 }
 
 /*---------------------time of day code--------------*/
+
+
+
 function customizeGreeting() 
 {
     let hour = getTimeOfDay();
@@ -67,6 +69,7 @@ function displayReferences() {
 
  let tableBody = document.querySelector('#references-table>tbody');
 
+
 for (let reference of references) {
     let html = '';
     html += '<tr>';
@@ -78,13 +81,10 @@ for (let reference of references) {
     tableBody.innerHTML += html;
  }
 }
+
 $(document).ready(() => {
     $('#getUserName').modal('show');
     customizeGreeting();
     displayReferences();
 });
 
-
-$(document).ready(function(){
-  $("tr:even").css("background-color", "yellow");
-});
