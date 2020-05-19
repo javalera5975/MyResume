@@ -83,3 +83,8 @@ $(document).ready(() => {
     customizeGreeting();
     displayReferences();
 });
+
+
+$(document).ready(function(){
+  $("tr:even").css("background-color", "yellow");
+});
