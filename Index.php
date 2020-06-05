@@ -9,12 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="CSS/Resume.css">
- </head>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
   
 <body>
   
   
-  <div class="content-wrap">
+  <div class="content-wrap" style="width: 100%;">
       <nav>
        <a href="#aboutme">About Me</a> |
        <a href="#ProfExperience">Professional Experience</a> |
@@ -67,7 +68,7 @@
   </div>
 </section>
 
-<div class="container-fluid">
+<div class="container-fluid" class="w3-display-container w3-green"></div>>
 <section class="Professional-Experience">
   <div id="ExperienceDiv">
     <div class="content-wrap">
@@ -128,16 +129,31 @@
   </div>
 </Section>
 </div>
+<?php
+ $mySkillz = ["HTML", "CSS","Bootstrap","JavaScript","PHP","MySQL"];
+ ?> 
+<div class="container">
+  <section id="skills">
+    <h1> Technical Skills in PHP</h1>
+    <?PHP
+    echo "<ul>";
+    foreach ($mySkillz as $webtech){
+       echo "<li>" . $webtech . "</li>";
+    }
+    echo "/ul";
+    ?>
+  </section>  
+</div>
 
-<Section class="Technical-Skills">
-  <div class="content-wrap">
+<div class="container,content-wrap">
+  <section id="skills">
     <img src="Images/Technical Skills.png" alt="Technical-Skills" style="width:150px;height:150px; float: left;">
       
     <h2 id="tech"> Technical Skills</h2>
-    <section class="webtech">
-      <h4>Web Development and Design</h4>
     
+    <h4>Web Development and Design</h4>
     
+    <!--
         <ul style="list-style-type:circle; float: right;">
           <li>Adobe PhotoshopCC2019</li>
           <li>HTML, CSS, and JavaScript</li>
@@ -161,15 +177,16 @@
           <li> FDA Compliance Medicare, Medicaid & Insurance Claims Processing</li>
           <li> Customer Service/Customer Relations</li>
         </ul>
-    </section>
-  </div> 
-</Section>
+      <!-->  
+    
+  </section> 
+</div>
 
 <section class="Core-Competencies">
   <div class="content-wrap" class="row" class="span1">
     <img src="Images/Core2.png" alt="Core-Competencies" style="width:150px;height:150px; float: left;">
   
-    <h2> Core Competencies</h2>
+    <h2> pore Competencies</h2>
   </div>
   <div class="row" class="span1">
       <ul style="list-style-type:circle;">
@@ -241,8 +258,8 @@
      <h2 id="ref"> References</h2>
 
         <table id="references-table">
-          <tbody>
-          <!--  --tr>
+          <tbody border="1">
+          
             <th>Company</th>
             <th>Contact</th>
             <th>Contact Info</th>
@@ -259,19 +276,58 @@
             <td>University of Utah Home Infusion</td>
             <td>Jamie Doi</td>
             <td>801-587-8600</td>
-          </tr>-->
+          </tr>
         </tbody>
+        
         </table>
+        
+  <script>$( "tr:even" ).css( "background-color", "yellow" );
+  </script>
   </div>    
 </section>
 
 <section class="Form">
+<?php
+function cleanData($data) {
+  $data = htmlspecialchars($data);
+  $data = trim($data);
+  $data = stripslashes($date);
+  
+  return $data;
+}
+$name ="";
+$nameErr ="";
+$email ="";
+$emailErr ="";
+$reasonForContactingErr ="";
+
+if (!empty($_POST{"name"])){
+  $nameErr = "The name field is required";
+} else {
+  echo cleanData($_POST['name']);
+}
+  if (empty($_POST['phone'])){
+    $emailErr = "The phone field is required!";
+} else {
+  echo cleanData($_POST["phone"]);
+}
+if (empty($_POST)["emailaddress"])) {
+  $reasonForContactingErr = "The email field is required!";
+} else {
+  echo cleanData($_POST["email"]);
+}
+?>
+
+
+?>
+
  <div class="content-wrap">
-  <form autocomplete="on" action="/action_page.php" target="_blank" method="POST">
-      <h2 id="contactme">Contact Me</h2>
+  <form autocomplete="on" target="_blank" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+     
+      <h2 id="contactme">Contact Me</h2>    
       <label for="name">First and last name:</label><br>
       <input style="font-size: large;" size="50px" type="text" id="name" name="name"><br><br>
-      <label for="name">Phone number:</label><br>
+      <label for="phone">Phone number:</label><br>
       <input style="font-size: large;" size="50px" type="tel" id="phonenumber" name="phonenumber"><br><br>
       <label for="emailaddress">Your email address:</label><br>
       <input style="font-size: large;" size="50px" type="email" id="emailaddress" name="emailaddress"><br><br>
@@ -283,11 +339,12 @@
       <input id="submit" onclick="getContactData();" type="submit">
   </form>
  </div>
- </section>
+ <?php
+
 
 <footer>
   <div class="content-wrap">
-      <text-align: center;>Copyright2020 </text-align:>
+      <text-align: center;>&copy;Jose Javalera 2020 </text-align:>
   </div> 
   <p id="my-paragraph"></p>     
 </footer>
@@ -308,7 +365,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="greetUser();">Submit</button>
+          <button type="button" class="btn btn-primary" onClick="greetUser()">Submit</button>
         </div>
       </div>
     </div>
@@ -324,7 +381,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <p><span id="message"> “Hi </span> <span id=userName></span>! Thank you for reviewing my resume site.”</p>>
+        <p><span id="message"> “Hi </span> <span id=userName></span>! Thank you for reviewing my resume site.”</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -332,24 +389,16 @@
     </div>
   </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
-
-
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="scripts.js"></script>
 
-<script src="scripts.js">
-</script>
-<script>
-  $(document).ready(function(){
-    $("tr:even").css("background-color", "yellow");
-  });
-  </script>
 </body>
+
 </html>

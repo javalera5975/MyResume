@@ -1,15 +1,19 @@
 let table = document.getElementById('references-table'); 
 table.style.color = "Red"
-
-
+/*
 function greetUser() 
 {
     let name = document.getElementById('greetingName').value;
     document.getElementById('userName').innerHTML = name;
     $('#getUserName').modal('hide');
     $('#greetUser').modal('show');
-}
 
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+            //print a message
+    }
+}
+/*
 function getContactData() 
 {
     let name = document.getElementById('name').value
@@ -43,7 +47,6 @@ function customizeGreeting()
     }
     displayGreetingMessage(message);
 }    
-
 function getTimeOfDay() 
 {
     let now = new Date();
@@ -59,18 +62,19 @@ function displayGreetingMessage (message)
 /* let exampleArray = new Array[3];
 let exampleArray2 = [1,2,3];
 let exampleArray3 = ["one etc.", "two seven", "three"]; */
-
-function displayReferences() {
+/*  function displayReferences()  {
  let references = [
     {company: 'Company', contact: 'Contact', contactInfo: 'Contact Info'},
     {company: "University of Utah Redwood Pharmacy", contact: "Machaela Jaquez", contactInfo: "801-213-9950"},
     {company: "University of Utah Home Infusion", contact: "Jamie Doi", contactInfo: "801-587-8600"},
  ];
 
+
  let tableBody = document.querySelector('#references-table>tbody');
+ 
 
 
-for (let reference of references) {
+for (let reference of references)  {
     let html = '';
     html += '<tr>';
     html += '<td>' + reference.company + '</td>';
@@ -80,11 +84,19 @@ for (let reference of references) {
 
     tableBody.innerHTML += html;
  }
+ 
 }
-
+*/
+/*
 $(document).ready(() => {
     $('#getUserName').modal('show');
     customizeGreeting();
     displayReferences();
 });
+if (!$('#name').val().includes(' ')) {
+    $('#name-alert').addClass('show');
+    $event.preventDefault();
+}   else {
+    $('name-alert').removeClass('show');
+}
 
